@@ -1,45 +1,70 @@
 package com.mycompany.locadora;
 public class Veiculo {
     
-   public String marca;
-   public String modelo;
-   public String cor;
-   public Integer numPlaca;
-   public float quilometragem;
-   public Integer anoFabri;
-   public String tipoVeiculo;
-   public  boolean statusLocacao;
+   private int id;
+   private String marca;
+   private String modelo;
+   private double valorLocacaoDia;
+   private int quilometragem;
+   private int ano;
+ 
+   public Veiculo(int id, String marca, String modelo, double valorLocacaoDia, int quilometragem, int ano ){
+       this.id = id;
+       this.marca = marca;
+       this.modelo = modelo;
+       this.valorLocacaoDia = valorLocacaoDia;
+       this.quilometragem = quilometragem;
+       this.ano = ano;
+   }
     
-    public void consultaVeiculo(){
-        System.out.println("A marca do veiculo é " + this.marca);
-        System.out.println("O modelo do veiculo é " + this.modelo);
-        System.out.println("A cor do veiculo é " + this.cor);
-        System.out.println("Numero da placa é " + this.numPlaca);
-        System.out.println("A quilometragem do veiculo é " + this.quilometragem);
-        System.out.println("O ano de fabricação do veiculo é " + this.anoFabri);
-        System.out.println("O tipo do veiculo é " + this.tipoVeiculo);
-        if(this.statusLocacao == true){
-        System.out.println("Liberado para locação");
-        }else{
-         System.out.println("Indisponivel no momento");  
-        }
-    }
-    
-    public void cadastrarVeiculos(String marcax, String modelox, String corx, int numPlacax, float quilometragemx, int anoFabrix,String tipoVeiculox,boolean statusLocacaox){
-        marca = marcax;
-        modelo = modelox;
-        cor = corx;
-        numPlaca = numPlacax;
-        quilometragem = quilometragemx;
-        anoFabri = anoFabrix;
-        tipoVeiculo = tipoVeiculox;
-        statusLocacao = statusLocacaox;
-        
-        if( (marca.equals("")) && (modelo.equals("")) && (cor.equals("")) && (numPlaca == null) && (anoFabri == null) && (tipoVeiculo.equals("")) ){
-             System.out.println("Veiculo registrado com sucesso"); 
-        }else{
-              System.out.println("Veiculo registrado com sucesso"); 
-        }
+    public int getId(){
+       return id;
+   }
+   public void setId( int id){
+       this.id = id;
+   }
+   
+   public String getMarca(){
+       return marca;
+   }
+   public void setMarca(String marca){
+       this.marca = marca;
+   }
+   
+   public String getModelo(){
+       return modelo;
+   }
+   public void setModelo( String modelo){
+       this.modelo = modelo;
+   }
+   
+   public double getValorLocacaoDia(){
+       return valorLocacaoDia;
+   }
+   public void setValorLocacaoDia(double valorLocacaoDia){
+       this.valorLocacaoDia = valorLocacaoDia;
+   }
+   
+   public int getQuilometragem(){
+       return quilometragem;
+   }
+   public void setQuilometragem(int quilometragem){
+        this.quilometragem = quilometragem;
+   }
+   
+   public int getAno(){
+       return ano;
+   }
+   public void setAno( int ano){
+        this.ano = ano;
+   }
+
+    public void MostrarDados(){
+        System.out.println("O Id do veiculo é " + this.getId());
+        System.out.println("A marca do veiculo é " + this.getMarca());
+        System.out.println("O modelo do veiculo é " + this.getModelo());
+        System.out.println("A quilometragem do veiculo é " + this.getQuilometragem());
+        System.out.println("O ano de fabricação do veiculo é " + this.getAno());
     }
     
     

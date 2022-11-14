@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.locadora;
-
-/**
- *
- * @author Maxwell
- */
 public class Carro extends Veiculo{
-    public int numPortas;
+    private int numPortas;
+    
+    public Carro(int id, String marca, String modelo, double valorLocacaoDia, int quilometragem, int ano, int numPortas ){
+        super(id,marca,modelo,valorLocacaoDia,quilometragem,ano);
+        this.numPortas = numPortas;
+    }
+    
+    public int getNumPortas(){
+        return numPortas;
+    }
+    public void setNumPortas( int numPortas){
+        this.numPortas = numPortas;
+    }
 }
