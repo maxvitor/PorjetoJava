@@ -2,6 +2,7 @@ package com.mycompany.locadora;
 public class Locadora {
 
     public static void main(String[] args) {   
+        
         Veiculo v1 = new Veiculo();
         v1.marca = "ford";
         v1.modelo = "fordK";
@@ -19,12 +20,30 @@ public class Locadora {
      
         Motocicleta moto = new Motocicleta();
         moto.cilindradas = 100;
-        moto.cor = "azul";
+        moto.cor = "Azul";
         moto.marca = "HONDA";
         
         Carro novoCarro = new Carro();
-        novo
+        novoCarro.numPortas = 4;
+        novoCarro.cor = "Verde";
+        novoCarro.marca = "FIAT";
+        
+        Caminhonete novaCaminhonete = new Caminhonete();
+        novaCaminhonete.CapacidadeCarga = 400;
+        novaCaminhonete.cor = "Branca";
+        novaCaminhonete.marca = "CHEVROLET";
+        
+       Cliente Ncliente = new Cliente();
+       Ncliente.id = 8;
+       Ncliente.nome = "Pedro";
+       Ncliente.dataNascto = "20/05/2001";
+       Ncliente.financeiroAprova = true;
        
+       Atendente N_atendente = new Atendente();
+       N_atendente.id = 4;
+       N_atendente.nome = "Maria";
+       N_atendente.dataNascto = "25/08/1990";
+       N_atendente.admim = true;
        
         
     }
